@@ -1,0 +1,24 @@
+body{
+    background-color: #A4D0A4;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    gap: 2em;
+}
+h1 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input {
+    margin-top: 30px;
+    padding:1.5rem;
+    background-color:white;
+    color:black;
+    font-size: 20px;
+}
+
+button {
+    margin-left:3rem;
+    padding:1.2rem;
+    border:solid black 4px;
+}

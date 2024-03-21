@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%=homeContent%></p>
+<!-- we are using for loop to iterate over each post stored in our posts object and then
+we find each post title and content and then we use these  function to render them to our home route using 
+variable expression don't use ejs notation to html tage we want to render -->
+<% post.forEach(function(eachpost) {%>
+    <h1><%=eachpost.title%></h1>
+    <p>
+        <%=eachpost.body.substring(0, 100)+"..."%>
+        <a href="/posts/<%=eachpost.title%>">Read More</a>
+    </p>
+    
+<%}); %>
+
+<%- include("partials/footer"); -%>

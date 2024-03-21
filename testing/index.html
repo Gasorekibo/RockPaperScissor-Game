@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #pdf-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+<main id="main" class="main">
+    <section class="login-section" style="padding: 10px 30px">
+        <div class="card col-md-10">
+            <div class="row">
+                <div class="col-md-6 login-box">
+                    <h2>Member login</h2>
+                    <form action="http://localhost:5000/api/v1/users/register" method="post">
+                        <!-- Your form inputs go here -->
+                        <button type="submit">Register</button>
+                    </form>
+                    <div class="login-with-box">
+                        <a class="btn-social btn-google" href="http://localhost:5000/auth/google" role="button">
+                            <i class="fab fa-google">Login with google</i>
+                        </a>
+                    </div>
+                    <a href="register">create your account <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="#" id="pdfLink">Terms and condition</a>
+            <div id="pdfContainer" style="display: none;">
+                <iframe class="pdf-viewer" src="./Jenga Privacy policy.pdf" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<footer>
+    <!-- Add your footer content here -->
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.js"></script>
+<script>
+    document.getElementById('pdfLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        var pdfContainer = document.getElementById('pdfContainer');
+
+        if (pdfContainer.style.display === 'block') {
+            pdfContainer.style.display = 'none';
+        } else {
+            pdfContainer.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>

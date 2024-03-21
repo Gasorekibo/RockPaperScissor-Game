@@ -1,0 +1,16 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "We are going to practice API by creating a weather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M.gasore",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "prompt-sync": "^4.2.0"
+  }
+}
